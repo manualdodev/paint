@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d8d8e1;
+}
+
+canvas {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tool-box {
+    width: 110px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin-left: 40px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.button__tool,
+.button__size {
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+}
+
+.button__tool > span {
+    font-size: 1.8rem;
+}
+
+.button__tool:hover,
+.button__size:hover {
+    background-color: #f2f2f2;
+}
+
+.input__color {
+    width: 45px;
+    height: 45px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 5px 7px;
+}
+
+.input__color::-webkit-color-swatch {
+    border-radius: 100px;
+}
+
+.button__size {
+    padding: 10px;
+    height: auto;
+}
+
+.button__size > span {
+    width: 100%;
+    background-color: #000;
+    border-radius: 100px;
+    display: block;
+}
+
+.button__size[data-size="5"] > span {
+    height: 5px;
+}
+
+.button__size[data-size="10"] > span {
+    height: 10px;
+}
+
+.button__size[data-size="20"] > span {
+    height: 20px;
+}
+
+.button__size[data-size="30"] > span {
+    height: 30px;
+}
+
+.active {
+    background-color: #f2f2f2;
+}
